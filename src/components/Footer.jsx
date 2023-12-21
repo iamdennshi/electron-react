@@ -2,7 +2,7 @@ import React from "react";
 
 import { Box, Link, Typography } from "@mui/joy";
 
-export default function Footer() {
+export default function Footer({ lang }) {
   return (
     <Box component="footer" sx={{ py: 3 }}>
       <Typography level="body-xs" textAlign="center">
@@ -11,7 +11,7 @@ export default function Footer() {
           href="https://github.com/iamdennshi"
           target="_blank"
         >
-          Сделано с ❤ ИСб-4
+          {lang ? "Сделано с ❤ ИСб-4" : "Made with ❤ ISb-4"}
         </Link>
       </Typography>
     </Box>

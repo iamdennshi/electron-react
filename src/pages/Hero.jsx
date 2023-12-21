@@ -5,7 +5,7 @@ import Typography from "@mui/joy/Typography";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Container } from "@mui/joy";
 
-export default function Hero({ onClickStart }) {
+export default function Hero({ lang, onClickStart }) {
   return (
     <Container
       sx={() => ({
@@ -29,20 +29,17 @@ export default function Hero({ onClickStart }) {
         })}
       >
         <Typography color="primary" fontSize="lg" lineHeight="lg">
-          Экспертная система
+          {lang ? "Экспертная система" : "Rule-based expert system"}
         </Typography>
-        <Typography
-          level="h1"
-          fontWeight="x1"
-          fontSize="clamp(1.875rem, 1.3636rem + 2.1818vw, 3rem)"
-          textTransform="uppercase"
-        >
-          Выбор языка программирования
+        <Typography level="h1" fontWeight="x1" textTransform="uppercase">
+          {lang
+            ? "Выбор языка программирования"
+            : "Choice programming language"}
         </Typography>
         <Typography fontSize="lg" textColor="text.secondary" lineHeight="lg">
-          Определитесь с языком программирования менее чем за 3 минуты. Ответив
-          на вопросы, система подберет для вас подходящий язык, который решит
-          вашу задачу
+          {lang
+            ? "Определитесь с языком программирования менее чем за 3 минуты. Ответив на вопросы, система подберет для вас подходящий язык, который поможет решить вашу задачу"
+            : "Decide on a programming language less than 3 minutes. Answering the questions, the system will select corresponding one for you, which will help to solve your problem"}
         </Typography>
         <Box
           sx={{
@@ -58,7 +55,7 @@ export default function Hero({ onClickStart }) {
             size="lg"
             endDecorator={<ArrowForward fontSize="xl" />}
           >
-            Выбрать сейчас
+            {lang ? "Выбрать сейчас" : "Let's go"}
           </Button>
         </Box>
         <Box
@@ -82,7 +79,7 @@ export default function Hero({ onClickStart }) {
               18+
             </Typography>
             <Typography textColor="text.secondary">
-              языков программирования
+              {lang ? "языков программирования" : "program languages"}
             </Typography>
           </div>
           <div>
@@ -90,14 +87,16 @@ export default function Hero({ onClickStart }) {
               30+
             </Typography>
             <Typography textColor="text.secondary">
-              продукционных правил
+              {lang ? "продукционных правил" : "production rules"}
             </Typography>
           </div>
           <div>
             <Typography fontSize="xl4" fontWeight="lg">
               {"<3"}
             </Typography>
-            <Typography textColor="text.secondary">минут</Typography>
+            <Typography textColor="text.secondary">
+              {lang ? "минут" : "minutes"}
+            </Typography>
           </div>
         </Box>
       </Box>

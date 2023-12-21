@@ -2,6 +2,7 @@ import { Box, Button, Container, Typography } from "@mui/joy";
 import React from "react";
 
 export default function Question({
+  lang,
   question,
   answers,
   onClickAnswers,
@@ -29,7 +30,7 @@ export default function Question({
           level="h1"
           fontWeight="x1"
         >
-          Вопрос {questionNumber + 1}
+          {lang ? "Вопрос" : "Question"} {questionNumber + 1}
         </Typography>
         <Typography textAlign="center" level="h1" fontWeight="x1">
           {question}

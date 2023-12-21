@@ -24,35 +24,68 @@ const knowleageBase = {
   questions: [
     {
       id: 1,
-      content: "Есть ли опыт в программировании?",
+      content: {
+        ru: "Есть ли опыт в программировании?",
+        eng: "Do you have any programming experience?",
+      },
       childs: [2, 34],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 2,
-      content:
-        "Программа должна исполняться на ОС компьютеров или ноутбуков (Windows или Linux)?",
+      content: {
+        ru: "Программа должна исполняться на ОС компьютеров или ноутбуков (Windows или Linux)?",
+        eng: "Do you need a program running on a PC or a laptop (Windows or Linux)?",
+      },
       childs: [3, 43],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 3,
-      content: "Под какую ОС создается программа?",
+      content: {
+        ru: "Под какую ОС создается программа?",
+        eng: "Which OS is the program being created for?",
+      },
       childs: [4, 54, 47],
-      answers: ["Windows", "Linux", "Неважно"],
+      answers: {
+        ru: ["Windows", "Linux", "Неважно"],
+        eng: ["Windows", "Linux", "No matter"],
+      },
     },
     {
       id: 4,
-      content: "Вид программы?",
+      content: {
+        ru: "Вид программы?",
+        eng: "Which interface will the program be use?",
+      },
       childs: [5, 6, 56],
-      answers: ["Неважно", "Оконное", "Консольное"],
+      answers: {
+        ru: ["Неважно", "Оконное", "Консольное"],
+        eng: [
+          "No matter",
+          "Graphical user interface",
+          "Command-line interface",
+        ],
+      },
     },
 
     {
       id: 56,
-      content: "Программа должна работать с CMS?",
+      content: {
+        ru: "Программа должна работать с CMS?",
+        eng: "Will the program interact with the CMS?",
+      },
       childs: [7, 6],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 54,
@@ -307,7 +340,7 @@ const knowleageBase = {
   ],
 };
 
-export default function Body() {
+export default function Body({ lang }) {
   const [idCurQuestion, setIdCurQuestion] = useState(0);
   const [listOfQuestions, setListOfQuestions] = useState([]);
   const [answer, setAnswer] = useState(null);
@@ -342,24 +375,25 @@ export default function Body() {
   };
 
   if (idCurQuestion === 0) {
-    return <Hero onClickStart={handleStart} />;
+    return <Hero lang={lang} onClickStart={handleStart} />;
   } else if (idCurQuestion === -1) {
     return (
       <Result
         onClickRestart={handleStart}
-        answer={answer.content}
+        answer={lang ? answer.content.ru : answer.content.eng}
         image={answer.image}
-        description={answer.description}
+        description={lang ? answer.description.ru : answer.description.eng}
         listOfQuestions={listOfQuestions}
       />
     );
   }
   return (
     <Question
+      lang={lang}
       onClickAnswers={handleAnswers}
       questionNumber={listOfQuestions.length}
-      question={curQuestionItem.content}
-      answers={curQuestionItem.answers}
+      question={lang ? curQuestionItem.content.ru : curQuestionItem.content.eng}
+      answers={lang ? curQuestionItem.answers.ru : curQuestionItem.answers.eng}
     />
   );
 }

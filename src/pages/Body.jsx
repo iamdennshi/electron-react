@@ -89,134 +89,258 @@ const knowleageBase = {
     },
     {
       id: 54,
-      content: "Программа должна работать в веб браузере?",
+      content: {
+        ru: "Программа должна работать в веб браузере?",
+        eng: "Will the program work in the browser?",
+      },
       childs: [5, 53],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 39,
-      content: "Программа представляет собой 2D или 3D игру?",
+      content: {
+        ru: "Программа представляет собой 2D или 3D игру?",
+        eng: "Will the program be a 2D or 3D game?",
+      },
       childs: [49, 48],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 37,
-      content: "Программа должна исполняться на микроконтроллере?",
+      content: {
+        ru: "Программа должна исполняться на микроконтроллере?",
+        eng: "Will the program work in the microcontroller?",
+      },
       childs: [38, 33],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 38,
-      content: "Есть ли опыт в низкоуровневом программировании?",
+      content: {
+        ru: "Есть ли опыт в низкоуровневом программировании?",
+        eng: "Do you have any low-level programming experience?",
+      },
       childs: [30, 29],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 43,
-      content:
-        "Программа должна исполняться на ОС смартфонов (IOS или Android)?",
+      content: {
+        ru: "Программа должна исполняться на ОС смартфонов (IOS или Android)?",
+        eng: "Will the program work in IOS or Android?",
+      },
       childs: [44, 37],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
 
     {
       id: 44,
-      content: "Под какую мобильную ОС создается программа?",
+      content: {
+        ru: "Под какую мобильную ОС разрабатывается программа?",
+        eng: "Which mobile OS will the program being developed for?",
+      },
       childs: [45, 46, 39],
-      answers: ["Android", "IOS", "Неважно"],
+      answers: {
+        ru: ["Android", "IOS", "Неважно"],
+        eng: ["Android", "IOS", "No matter"],
+      },
     },
 
     {
       id: 45,
-      content: "Требуется ли поддержка старых устройств?",
+      content: {
+        ru: "Требуется ли поддержка старых устройств?",
+        eng: "Will it require to support an old devices?",
+      },
       childs: [8, 9],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 46,
-      content: "Требуется ли поддержка старых устройств?",
+      content: {
+        ru: "Требуется ли поддержка старых устройств?",
+        eng: "Will it require to support an old devices?",
+      },
       childs: [10, 11],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
 
     {
       id: 47,
-      content: "Программа представляет собой 2D или 3D игру?",
+      content: {
+        ru: "Программа представляет собой 2D или 3D игру?",
+        eng: "Will the program be a 2D or 3D game?",
+      },
       childs: [50, 48],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 50,
-      content: "Есть опыт в создании игры?",
+      content: {
+        ru: "Есть опыт в создании игры?",
+        eng: "Do you have any experience of making game?",
+      },
       childs: [51, 49],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 30,
-      content: "Требуется ли автоматическая очистка памяти?",
+      content: {
+        ru: "Требуется ли автоматическая очистка памяти?",
+        eng: "Will it require to clean memory automatically?",
+      },
       childs: [14, 26],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 26,
-      content: "Для вас важен полный контроль над микроконтроллером?",
+      content: {
+        ru: "Для вас важен полный контроль над микроконтроллером?",
+        eng: "Is full control of the microcontroller important to you?",
+      },
       childs: [25, 17],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 25,
-      content: "Требуется ли максимальная производительность?",
+      content: {
+        ru: "Требуется ли максимальная производительность от железа?",
+        eng: "Is maximum performance required from hardware?",
+      },
       childs: [15, 16],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 34,
-      content: "Для вас важна популярность языка программирования?",
+      content: {
+        ru: "Для вас важна популярность языка программирования?",
+        eng: "Is popularity of programming language important to you?",
+      },
       childs: [40, 31],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 40,
-      content: "Программа создается с целью обучения основам программирования?",
+      content: {
+        ru: "Программа создается с целью обучения основам программирования?",
+        eng: "Do you want to create a program by learning the basics of programming?",
+      },
       childs: [53, 35],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 35,
-      content:
-        "Требуется быстро создать рабочее приложение с красивым графическим интерфейсом?",
+      content: {
+        ru: "Требуется быстро создать рабочее приложение с красивым графическим интерфейсом?",
+        eng: "Is it necessary to create a working program with a nice graphical interface quickly?",
+      },
       childs: [5, 6],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 31,
-      content: "Программа создается с целью обучения основам программирования?",
+      content: {
+        ru: "Программа создается с целью обучения основам программирования?",
+        eng: "Do you want to create a program by learning the basics of programming?",
+      },
       childs: [32, 27],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 27,
-      content: "Программа создается с целью создания игр?",
+      content: {
+        ru: "Программа создается с целью создания игр?",
+        eng: "Do you want to create a game?",
+      },
       childs: [28, 24],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 24,
-      content: "Программа должна работать на мобильных устройствах?",
+      content: {
+        ru: "Программа должна работать на мобильных устройствах?",
+        eng: "Will the program run on the mobile OS",
+      },
       childs: [23, 20],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
     {
       id: 23,
-      content: "Под какую мобильную ОС создается программа?",
+      content: {
+        ru: "Под какую мобильную ОС создается программа?",
+        eng: "Which mobile OS will the program being developed for?",
+      },
       childs: [9, 11],
-      answers: ["Android", "IOS"],
+      answers: {
+        ru: ["Android", "IOS"],
+        eng: ["Android", "IOS"],
+      },
     },
     {
       id: 20,
-      content: "Программа должна исполняться на микроконтроллере?",
+      content: {
+        ru: "Программа должна исполняться на микроконтроллере?",
+        eng: "Will the program work in the microcontroller?",
+      },
       childs: [29, 19],
-      answers: ["Да", "Нет"],
+      answers: {
+        ru: ["Да", "Нет"],
+        eng: ["Yes", "No"],
+      },
     },
   ],
   answers: [
